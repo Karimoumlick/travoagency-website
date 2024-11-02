@@ -1,0 +1,464 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="thumbnails-1.webp/travo lakhir-07.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Travo Agency | Cruise Ship Recruitment Agency in Morocco</title>
+    <meta name="description" content="Travo Agency is a Morocco-based recruitment agency connecting skilled professionals with cruise ship careers in hospitality, culinary, and medical services.">
+    <meta name="keywords" content="Travo Agency, cruise ship jobs, recruitment agency Morocco, hospitality jobs, cruise careers">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="About Us - Travo Agency">
+    <meta property="og:description" content="Travo Agency connects skilled Moroccan professionals with exciting cruise ship careers in hospitality, culinary, and technical fields.">
+    <meta property="og:image" content="URL_to_image"> <!-- Replace with actual image URL -->
+    <meta property="og:url" content="https://www.travo-agency.com/about-us">
+    <meta property="og:type" content="website">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Us - Travo Agency">
+    <meta name="twitter:description" content="Travo Agency connects skilled Moroccan professionals with exciting cruise ship careers in hospitality, culinary, and technical fields.">
+    <meta name="twitter:image" content="URL_to_image"> <!-- Replace with actual image URL -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: white;
+            color: #333;
+        }
+
+        /* Header Styling */
+header {
+    position: relative;
+    overflow: hidden;
+    transition: opacity 1s ease-in-out;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .header-images {
+    width: 100%;
+    height: 400px;
+}
+
+header .header-images img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: zoomInOut 10s infinite ease-in-out;
+}
+
+@keyframes zoomInOut {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+header .header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #003459;
+}
+
+
+/* General Section Styling */
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    background-color: #F7FFF7;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Presentation Section */
+.presentation-section h1 {
+    font-size: 2.5rem;
+    color: #003459;
+    margin-bottom: 20px;
+}
+.presentation-section h2{
+    font-size: 2.5rem;
+    color:#003459;
+}
+.presentation-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* About Section */
+.about-content {
+    text-align: center;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    color: #003459;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* ULs Styling */
+.uls {
+    text-align: left;
+    font-size: 1.2rem;
+    color: #555;
+    padding-left: 40px; /* Space for bullet points */
+    margin: 20px 0; /* Add margin for separation */
+}
+
+.uls li {
+    margin-bottom: 10px; /* Add space between each list item */
+}
+
+/* Animate Class */
+.animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+        .about-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Core Values Section */
+        .values-section {
+            padding: 60px 20px;
+            background-color: #F7FFF7;
+            text-align: center;
+        }
+
+        .values-section h2 {
+            font-size: 2.5rem;
+            color: #003459;
+            margin-bottom: 40px;
+        }
+
+        .values-container {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .value-item {
+            width: 300px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .value-item h3 {
+            font-size: 1.8rem;
+            color: #003459;
+            margin-bottom: 15px;
+        }
+
+        .value-item p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+        .fas.fa-trophy {
+            color: #f0ad4e;
+            padding: 20px;
+        }
+        .fas.fa-clock {
+            color:#003459;
+            padding: 20px;
+        }
+        .fas.fa-handshake {
+            color: #003459;
+            padding: 20px;
+        }
+
+
+
+         /* Footer Section Styling */
+.footer {
+    background: #003459;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 30px 15px; /* Reduced padding for a smaller footer */
+    font-size: 0.9rem; /* Reduced font size for better UX */
+    position: relative;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adds space between icons */
+    margin-bottom: 40px; /* Reduced margin for a smaller footer */
+}
+
+/* Social Media Icons */
+.social-icons a {
+    display: inline-block;
+    width: 40px; /* Reduced size for smaller icons */
+    height: 40px;
+    border-radius: 50%; /* Makes the icons circular */
+    background-color: #FFFFFF; /* Icon background color */
+    color: #003459; /* Icon color */
+    font-size: 20px; /* Reduced icon size */
+    line-height: 40px; /* Centers the icon vertically */
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #A9C1D9; /* Change background color on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Footer Email Styling */
+.footer-email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem; /* Reduced font size for smaller footer */
+}
+
+.footer-email a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.footer-email a:hover {
+    text-decoration: underline;
+}
+.no-pointer {
+    pointer-events: none;
+    cursor: default;
+}
+
+/* Footer Links */
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 0.9rem; /* Reduced font size for a smaller footer */
+}
+
+.footer-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem; /* Ensure consistent font size */
+}
+
+/* Privacy Policy Link Styling */
+.privacy-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-size: 0.9rem; /* Reduced font size for a smaller footer */
+}
+
+.privacy-link:hover {
+    color: #5f6d77;
+}
+
+.footer p {
+    font-size: 0.9rem; /* Reduced font size for a smaller footer */
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    /* Adjust layout for small screens */
+    .social-icons {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .footer-links {
+        font-size: 0.8rem; /* Slightly larger text for mobile */
+    }
+}
+
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.4s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Section Animation on Scroll
+            const animatedSections = document.querySelectorAll(".animate");
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            }, {
+                threshold: 0
+            });
+
+            animatedSections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Header fade in/out on scroll
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', function() {
+                const scrollPosition = window.scrollY;
+                const fadeStart = 100;
+                const fadeEnd = 400;
+
+                if (scrollPosition <= fadeStart) {
+                    header.style.opacity = 1;
+                } else if (scrollPosition >= fadeEnd) {
+                    header.style.opacity = 0;
+                } else {
+                    header.style.opacity = 1 - (scrollPosition - fadeStart) / (fadeEnd - fadeStart);
+                }
+            });
+        });
+        
+        </script> 
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-images">
+          <img src="thumbnails-1.webp/1-cruise-ship-front-1536x520.jpg" alt="Front view of a cruise ship sailing at sea" class="animated-image">
+        </div>
+    </header>
+
+    <!-- Presentation Section -->
+    <section class="presentation-section animate">
+        <h1>Who We Are</h1>
+        <br>
+        <p>
+          Travo Agency is a recruitment agency based in Morocco, helping people find jobs on cruise ships. We work with well known cruise lines and connect them with skilled workers for jobs in hospitality, cooking, and medical services. Our goal is to make it easier for Africans to start exciting careers at sea.</p>
+        <br>
+        <h2>Requirements established by cruise lines:</h2>
+        <br>
+        <ul class="uls">
+             <li>You must be at least 21 years old.</li>
+             <li>You need to speak English well.</li>
+             <li>Most starting jobs need at least 1 year of work experience.</li>
+             <li>Contracts can be different depending on the cruise line.</li>
+             <li>All shipboard jobs require crew members to work 7 days a week.</li>
+             <li>A strong work ethic is essential.</li>
+        </ul>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section animate">
+        <div class="about-content">
+            <h2>Our Mission</h2>
+            <p>At Travo, our mission is to connect talented individuals with cruise ship careers that allow them to grow, explore, and thrive. We believe in making the recruitment process easier and more transparent for professionals across Africa.</p>
+            <p>We partner with top cruise lines to provide exciting job opportunities in the hospitality, culinary, and technical industries, helping our clients achieve their career goals while traveling the world.</p>
+
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="values-section animate">
+      <h2>Our Values</h2>
+      <div class="values-container">
+          <div class="value-item">
+              <i class="fas fa-handshake  fa-3x"></i> <!-- Corrected Responsibility Icon -->
+              <h3>Responsibility</h3>
+              <p>We guide and support all of our candidates throughout the recruitment process.</p>
+          </div>
+          <div class="value-item">
+              <i class="fas fa-trophy  fa-3x"></i> <!-- Added Icon for Excellence -->
+              <h3>Excellence</h3>
+              <p>We match the best people with the best jobs.</p>
+          </div>
+          <div class="value-item">
+              <i class="fas fa-clock  fa-3x"></i> <!-- Added Icon for Efficiency -->
+              <h3>Efficiency</h3>
+              <p>We make the recruitment process quick and easy.</p>
+          </div>
+      </div>
+    </section>
+
+
+   <!-- Footer Section -->
+   <footer class="footer">
+    <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61567240391546" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/travo_agence/profilecard/?igsh=MWVrbHg5bHpxMzl1aQ%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/travoagency" target="_blank" rel="noopener noreferrer" aria-label="Travo-Agency LinkedIn Page">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        
+        </a>
+        <a href="https://wa.me/212605526611" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"> 
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        
+        </a>
+    </div>
+    <div class="footer-links">
+        <a href="#" class="no-pointer">TRAVEL FAR, WORK BETTER.</a>
+
+        <!-- Email Address with Icon -->
+        <div class="footer-email">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:contact@travo-agency.com">contact@travo-agency.com</a>
+        </div>
+        <a id="privacyPolicyLink" class="privacy-link" href="privacy-policy.html" target="_blank">Privacy Policy</a>
+    </div>
+    <hr>
+    <p>&copy; 2024 Travo Agency. All rights reserved.</p>
+</footer>
+</body>
+</html>

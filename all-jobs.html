@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Viewport meta tag for responsive design -->
+    <link rel="icon" type="image/x-icon" href="thumbnails-1.webp/travo lakhir-07.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Updated title for SEO -->
+    <title>Job Openings in Morocco - Travo Agency | Cruise Ship Recruitment</title>
+    <!-- Meta description for SEO -->
+    <meta name="description" content="Explore current job openings with Travo Agency in Morocco. Join the cruise ship industry with positions in hospitality, culinary arts, and more. Apply today!">
+    <!-- Meta keywords for SEO -->
+    <meta name="keywords" content="Travo Agency, job openings Morocco, cruise ship jobs, recruitment agency Morocco, hospitality jobs, maritime careers, job seekers Morocco">
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:title" content="Job Openings in Morocco - Travo Agency">
+    <meta property="og:description" content="Explore current job openings with Travo Agency in Morocco. Join the cruise ship industry with positions in hospitality, culinary arts, and more. Apply today!">
+    <meta property="og:image" content="URL_to_image"> <!-- Replace with actual image URL -->
+    <meta property="og:url" content="https://www.travo-agency.com/job-openings-morocco">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Job Openings in Morocco - Travo Agency">
+    <meta name="twitter:description" content="Explore current job openings with Travo Agency in Morocco. Join the cruise ship industry with positions in hospitality, culinary arts, and more. Apply today!">
+    <meta name="twitter:image" content="URL_to_image"> <!-- Replace with actual image URL -->
+    <!-- Fonts and Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+       html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    color: #2C2C2C;
+}
+
+/* Jobs Section */
+.jobs-section {
+    padding: 60px 20px;
+    background-color: #F7FFF7;
+    text-align: center;
+}
+
+.jobs-section h1 {
+    font-size: 2.5rem;
+    color: #003459;
+    margin-bottom: 40px;
+}
+
+.jobs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.job-card {
+    flex: 1 1 calc(33.33% - 20px);
+    background: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* When the card becomes visible */
+.job-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.job-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #003459;
+    margin-bottom: 10px;
+}
+
+.job-description {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.job-requirements {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Jobs Section Apply Button */
+.apply-button {
+    border: 2px solid #003459;
+    background-color: white;
+    color: #003459;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.6s ease, transform 0.3s ease;
+}
+
+.apply-button:hover {
+    background-color: #003459;
+    color: white;
+    border-color: white;
+    transform: scale(1.05);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.pagination a {
+    padding: 10px 15px;
+    background-color: #003459;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.6s ease;
+}
+
+/* Highlight the active page number */
+.pagination a.active {
+    background-color: #0066cc;
+}
+
+/* Style disabled buttons */
+.pagination a.disabled {
+    background-color: #ccc;
+    pointer-events: none;
+}
+
+/* Unique styles for "Previous" and "Next" buttons */
+.pagination a.prev-button, 
+.pagination a.next-button {
+    border: 2px solid #003459;
+    background-color: white;
+    color: #003459;
+    transition: background-color 0.3s ease, color 0.6s ease;
+}
+
+/* Hover effect for "Previous" and "Next" buttons */
+.pagination a.prev-button:hover, 
+.pagination a.next-button:hover {
+    background-color: #003459;
+    color: white;
+    border-color: white;
+}
+
+/* Hover effect for other page numbers */
+.pagination a:hover {
+    background-color: #0066cc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .job-card {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .job-card {
+        flex: 1 1 100%;
+    }
+}
+
+/* Footer Section Styling */
+.footer {
+    background: #003459;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 30px 15px;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* Social Media Icons */
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    color: #003459;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #A9C1D9;
+    transform: scale(1.1);
+}
+
+/* Footer Email Styling */
+.footer-email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+}
+
+.footer-email a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+
+
+.footer-email a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Links */
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.footer-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    
+}
+
+.no-pointer {
+    pointer-events: none;
+    cursor: default;
+}
+
+
+/* Privacy Policy Link Styling */
+.privacy-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.privacy-link:hover {
+    color: #5f6d77;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    /* Adjust layout for small screens */
+    .social-icons {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .footer-links {
+        font-size: 0.8rem;
+    }
+
+    .jobs-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .job-card {
+        flex: 1 1 100%;
+        max-width: none;
+    }
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.5s;
+    align-items: center;
+    justify-content: center;
+    /* Removed display: flex; */
+}
+
+/* Add a new class to display the modal */
+.modal.show {
+    display: flex; /* Use flex to center content */
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    overflow-y: auto;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-content p {
+    font-size: 1.2rem;
+    color: #2B455B;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.modal-content img {
+    max-width: 200px;
+    height: auto;
+}
+
+/* Close Button Styling */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+    z-index: 1001;
+}
+
+.close i {
+    font-size: inherit;
+}
+
+.close:hover,
+.close:focus {
+    color: #003459;
+    text-decoration: none;
+}
+
+/* Apply Form Styles */
+.apply-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Adding space at the top for the logo */
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select,
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+select:focus,
+input[type="file"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+label {
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #333;
+    text-align: left;
+    display: block;
+}
+
+/* Modal Submit Button */
+.submit-button {
+    background-color: white;
+    color: #003459;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+    border-radius: 6px;
+    border: 2px solid #003459;
+}
+
+.submit-button:hover {
+    background-color: #003459;
+    color: white;
+    border-color: white;
+}
+
+/* Spinner Styling */
+.spinner {
+    width: 80px;
+    height: 80px;
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #003459;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+    }
+}
+
+    </style>
+   
+</head>
+<body>
+
+ <!-- Apply Modal -->
+ <div id="applyModal" class="modal">
+    <div class="modal-content">
+        <i class="close fa-solid fa-xmark"></i>
+        <div class="logo-container">
+            <img src="thumbnails-1.webp/travo lakhir-05.png" alt="Travo Agency Logo" width="150">
+        </div>
+        <form id="applyForm" enctype="multipart/form-data">
+            <div>
+                <input type="text" id="fullName" name="fullName" placeholder="Full Name" required>
+            </div>
+            <div>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div>
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+            </div>
+            <div>
+                <label for="english">English Fluency Level:</label>
+                <select id="english" name="english" required>
+                    <option value="">Select Level</option>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Fluent">Fluent</option>
+                </select>
+            </div>
+            <div>
+                <label for="resume">Resume (Required):</label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+            </div>
+            <button type="submit" class="submit-button">Submit Application</button>
+        </form>
+    </div>
+</div>
+
+<!-- Success Modal -->
+<div id="successModal" class="modal">
+    <div class="modal-content">
+        <i class="close fa-solid fa-xmark"></i>
+        <div class="logo-container">
+            <img src="thumbnails-1.webp/travo lakhir-05.png" alt="Travo Agency Logo" width="150">
+        </div>
+        <p>Thank you for your application! We will get in touch soon.</p>
+    </div>
+</div>
+
+<!-- Loading Spinner -->
+<div id="loadingSpinner" class="modal">
+    <div class="spinner"></div>
+</div>
+  
+  <!-- Jobs Section -->
+  <section class="jobs-section">
+      <h1>Current Job Openings (86)</h1>
+      <div class="jobs-container" id="jobs-container">
+          <!-- Job Cards will be dynamically generated here -->
+      </div>
+      <!-- Pagination -->
+      <div class="pagination" id="pagination"></div>
+  </section>
+  
+ <!-- Footer Section -->
+ <footer class="footer">
+    <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61567240391546" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/travo_agence/profilecard/?igsh=MWVrbHg5bHpxMzl1aQ%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/travoagency" target="_blank" rel="noopener noreferrer" aria-label="Travo-Agency LinkedIn Page">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        
+        </a>
+        <a href="https://wa.me/212605526611" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"> 
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        
+        </a>
+    </div>
+    <div class="footer-links">
+        <a href="#" class="no-pointer">TRAVEL FAR, WORK BETTER.</a>
+
+         <!-- Email Address with Icon -->
+   <div class="footer-email">
+    <i class="fas fa-envelope"></i>
+    <a href="mailto:contact@travo-agency.com">contact@travo-agency.com</a>
+   </div>
+        <a id="privacyPolicyLink" class="privacy-link" href="privacy-policy.html" target="_blank">Privacy Policy</a>
+
+    </div>
+    <hr>
+    <p>&copy; 2024 Travo Agency. All rights reserved.</p>
+  </footer>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Configuration
+        const jobsPerPage = 9;
+        const maxVisiblePages = 5;
+    
+        // Job data with unique descriptions and requirements
+        const jobs = [
+            {
+                title: "Waiter/Waitress",
+                description: "Deliver exceptional dining experiences by providing prompt and courteous service to guests.",
+                requirements: "Diploma in Hospitality or equivalent. Food Handler Certification required."
+            },
+            {
+                title: "Housekeeping Attendant",
+                description: "Ensure guest rooms and public areas are clean and inviting at all times.",
+                requirements: "High school diploma. Previous housekeeping experience preferred."
+            },
+            {
+                title: "Chef de Partie",
+                description: "Lead a kitchen section, crafting exquisite dishes to delight our guests.",
+                requirements: "Degree in Culinary Arts. Minimum 3 years of experience in a similar role."
+            },
+            {
+                title: "Receptionist",
+                description: "Be the welcoming face of the establishment, managing reservations and guest inquiries.",
+                requirements: "Degree in Hospitality Management. Excellent communication skills."
+            },
+            {
+                title: "Nurse",
+                description: "Provide high-quality medical care to guests and crew onboard.",
+                requirements: "Registered Nurse license. CPR and First Aid certifications required."
+            },
+            {
+                title: "Electrician",
+                description: "Maintain and repair the ship's electrical systems to ensure safety and functionality.",
+                requirements: "Electrician License. Experience with marine electrical systems preferred."
+            },
+            {
+                title: "Barista",
+                description: "Craft and serve a variety of coffee beverages with artistic flair.",
+                requirements: "Barista Training Certificate. Passion for coffee and customer service."
+            },
+            {
+                title: "Sous Chef",
+                description: "Assist the Executive Chef in kitchen operations, ensuring high culinary standards.",
+                requirements: "Degree in Culinary Arts. Minimum 5 years of experience."
+            },
+            {
+                title: "Security Officer",
+                description: "Protect the guests and crew by enforcing security measures and protocols.",
+                requirements: "Security Certification. Background in law enforcement or military."
+            },
+            {
+                title: "Plumber",
+                description: "Install and maintain plumbing systems, ensuring efficient water supply and waste removal.",
+                requirements: "Certified Plumber License. Experience with large-scale systems."
+            },
+            {
+                title: "Bartender",
+                description: "Create a variety of cocktails and beverages, providing excellent guest interaction.",
+                requirements: "Bartending Certification. Knowledge of mixology and customer service."
+            },
+            {
+                title: "Massage Therapist",
+                description: "Provide relaxing and therapeutic massages to enhance guest wellness.",
+                requirements: "Licensed Massage Therapist. Proficiency in various massage techniques."
+            },
+            {
+                title: "Front Desk Manager",
+                description: "Oversee front desk operations, ensuring seamless guest experiences.",
+                requirements: "Bachelor's Degree in Hospitality Management. Leadership experience required."
+            },
+            {
+                title: "Childcare Specialist",
+                description: "Engage and care for children in onboard kids' club with fun activities.",
+                requirements: "Degree in Early Childhood Education. CPR and First Aid certifications."
+            },
+            {
+                title: "Entertainment Host",
+                description: "Lead entertainment programs and activities to keep guests engaged.",
+                requirements: "Degree in Performing Arts. Outgoing personality and excellent communication skills."
+            },
+            {
+                title: "HVAC Technician",
+                description: "Maintain heating, ventilation, and air conditioning systems onboard.",
+                requirements: "HVAC Certification. Experience with commercial HVAC systems."
+            },
+            {
+                title: "Deck Officer",
+                description: "Assist in navigation and deck operations, ensuring safety at sea.",
+                requirements: "STCW Certification. Degree in Nautical Science preferred."
+            },
+            {
+                title: "Pastry Chef",
+                description: "Create delectable pastries and desserts to delight our guests.",
+                requirements: "Degree in Pastry Arts. Minimum 3 years of pastry experience."
+            },
+            {
+                title: "Laundry Attendant",
+                description: "Manage laundry services, ensuring linens and garments are impeccably cleaned.",
+                requirements: "High school diploma. Previous laundry service experience."
+            },
+            {
+                title: "Gift Shop Assistant",
+                description: "Provide excellent customer service in our onboard retail stores.",
+                requirements: "Retail experience. Strong communication and sales skills."
+            },
+            {
+                title: "Photographer",
+                description: "Capture memorable moments for guests to cherish.",
+                requirements: "Degree in Photography or related field. Portfolio required."
+            },
+            {
+                title: "Guest Relations Officer",
+                description: "Handle guest inquiries and resolve issues to ensure satisfaction.",
+                requirements: "Degree in Hospitality Management. Strong problem-solving skills."
+            },
+            {
+                title: "Kitchen Steward",
+                description: "Maintain cleanliness in the kitchen and assist with basic food preparation.",
+                requirements: "Food Handler Certification. Ability to work in a fast-paced environment."
+            },
+            {
+                title: "Lifeguard",
+                description: "Ensure the safety of guests at the pools and water attractions.",
+                requirements: "Lifeguard Certification. CPR and First Aid certifications."
+            },
+            {
+                title: "Activity Coordinator",
+                description: "Plan and execute onboard activities for guests of all ages.",
+                requirements: "Degree in Recreation Management. Creative and organizational skills."
+            },
+            {
+                title: "Cruise Director",
+                description: "Lead the entertainment team to deliver exceptional guest experiences.",
+                requirements: "Degree in Hospitality or Entertainment Management. Extensive experience required."
+            },
+            {
+                title: "Bar Manager",
+                description: "Oversee bar operations, ensuring quality service and profitability.",
+                requirements: "Degree in Hospitality Management. Experience in bar management."
+            },
+            {
+                title: "Restaurant Manager",
+                description: "Manage restaurant operations, maintaining high service standards.",
+                requirements: "Degree in Hospitality Management. Leadership and organizational skills."
+            },
+            {
+                title: "Casino Dealer",
+                description: "Operate casino games professionally and entertain guests.",
+                requirements: "Casino Dealer Certification. Proficiency in multiple games."
+            },
+            {
+                title: "Fitness Instructor",
+                description: "Lead fitness classes and offer personal training sessions.",
+                requirements: "Certification from recognized fitness organization. CPR certification."
+            },
+            {
+                title: "Spa Manager",
+                description: "Oversee spa operations, ensuring a relaxing environment for guests.",
+                requirements: "Degree in Spa Management. Experience in spa services."
+            },
+            {
+                title: "Cabin Steward",
+                description: "Provide personalized housekeeping services to guests in their cabins.",
+                requirements: "Experience in housekeeping. Attention to detail and guest service."
+            },
+            {
+                title: "Medical Officer",
+                description: "Provide medical services and handle health emergencies onboard.",
+                requirements: "Medical Degree. License to practice medicine. Emergency medicine experience."
+            },
+            {
+                title: "Stewarding Supervisor",
+                description: "Lead the stewarding team to maintain cleanliness in all areas.",
+                requirements: "Experience in supervisory roles. Strong leadership skills."
+            },
+            {
+                title: "Beautician",
+                description: "Offer beauty treatments and services to guests in the spa.",
+                requirements: "Cosmetology License. Proficiency in various beauty treatments."
+            },
+            {
+                title: "Hair Stylist",
+                description: "Provide hair styling services, helping guests look their best.",
+                requirements: "Licensed Hair Stylist. Experience with diverse hair types."
+            },
+            {
+                title: "Public Health Officer",
+                description: "Ensure compliance with health regulations and sanitation standards.",
+                requirements: "Degree in Public Health or related field. Knowledge of maritime health codes."
+            },
+            {
+                title: "Galley Steward",
+                description: "Assist in kitchen operations and maintain cleanliness in the galley.",
+                requirements: "Food Handler Certification. Ability to handle physical tasks."
+            },
+            {
+                title: "Assistant Chef",
+                description: "Support the kitchen team in preparing meals and managing inventory.",
+                requirements: "Culinary Arts Diploma. Experience in high-volume kitchens."
+            },
+            {
+                title: "Chef",
+                description: "Create culinary delights and manage kitchen staff.",
+                requirements: "Degree in Culinary Arts. Proven leadership in a culinary setting."
+            },
+            {
+                title: "Culinary Assistant",
+                description: "Assist chefs with food preparation and kitchen tasks.",
+                requirements: "Culinary training. Passion for cooking and learning."
+            },
+            {
+                title: "Wait Staff",
+                description: "Provide attentive and friendly service to restaurant guests.",
+                requirements: "Experience in food service. Excellent customer service skills."
+            },
+            {
+                title: "Room Service Attendant",
+                description: "Deliver meals and amenities to guest cabins promptly.",
+                requirements: "Experience in hospitality. Professional and courteous demeanor."
+            },
+            {
+                title: "Hotel Manager",
+                description: "Oversee all hotel operations to ensure guest satisfaction.",
+                requirements: "Degree in Hospitality Management. Extensive managerial experience."
+            },
+            {
+                title: "Sales Associate",
+                description: "Promote and sell products in our onboard retail shops.",
+                requirements: "Retail sales experience. Strong interpersonal skills."
+            },
+            {
+                title: "Laundry Supervisor",
+                description: "Manage the laundry team to maintain efficient operations.",
+                requirements: "Experience in laundry services. Supervisory skills."
+            },
+            {
+                title: "Maintenance Technician",
+                description: "Perform repairs and maintenance on ship equipment and facilities.",
+                requirements: "Technical training. Experience with mechanical and electrical systems."
+            },
+            {
+                title: "Radio Operator",
+                description: "Manage communication systems and coordinate with maritime authorities.",
+                requirements: "Radio Operator License. Knowledge of maritime communication protocols."
+            },
+            {
+                title: "Safety Officer",
+                description: "Implement safety procedures and conduct regular drills.",
+                requirements: "Degree in Safety Management. Certification in safety protocols."
+            },
+            {
+                title: "IT Technician",
+                description: "Support and maintain onboard IT systems and networks.",
+                requirements: "Degree in Information Technology. Certifications like CompTIA A+."
+            },
+            {
+                title: "Logistics Coordinator",
+                description: "Manage supply chains and inventory for onboard operations.",
+                requirements: "Degree in Logistics or Supply Chain Management. Organizational skills."
+            },
+            {
+                title: "Inventory Controller",
+                description: "Monitor and manage inventory levels for various departments.",
+                requirements: "Experience in inventory management. Attention to detail."
+            },
+            {
+                title: "Cruise Host",
+                description: "Welcome guests and provide information about onboard activities.",
+                requirements: "Degree in Hospitality or Tourism. Excellent communication skills."
+            },
+            {
+                title: "Broadcast Technician",
+                description: "Operate and maintain audio-visual equipment for events.",
+                requirements: "Degree in Broadcast Technology. Experience with AV systems."
+            },
+            {
+                title: "IT Officer",
+                description: "Lead the IT team to ensure smooth technological operations.",
+                requirements: "Degree in Information Technology. Leadership experience."
+            },
+            {
+                title: "Executive Chef",
+                description: "Oversee all culinary operations, menus, and kitchen staff.",
+                requirements: "Degree in Culinary Arts. Extensive executive experience."
+            },
+            {
+                title: "Junior Sous Chef",
+                description: "Assist in managing kitchen sections and supervising staff.",
+                requirements: "Culinary Arts Degree. Experience in leadership roles."
+            },
+            {
+                title: "Chief Engineer",
+                description: "Lead the engineering department to maintain ship's technical operations.",
+                requirements: "Degree in Marine Engineering. Chief Engineer License."
+            },
+            {
+                title: "IT Manager",
+                description: "Oversee IT infrastructure and strategic technological initiatives.",
+                requirements: "Degree in Information Technology. Management experience."
+            },
+            {
+                title: "Tour Guide",
+                description: "Lead guests on excursions, providing insightful information.",
+                requirements: "Degree in Tourism or related field. Knowledgeable about destinations."
+            },
+            {
+                title: "Destination Manager",
+                description: "Coordinate shore excursions and liaise with local operators.",
+                requirements: "Experience in travel industry. Strong negotiation skills."
+            },
+            {
+                title: "Operations Manager",
+                description: "Oversee daily operations to ensure efficiency and guest satisfaction.",
+                requirements: "Degree in Business Management. Extensive operational experience."
+            },
+            {
+                title: "Hotel Director",
+                description: "Lead the hotel department, ensuring top-quality guest services.",
+                requirements: "Degree in Hospitality Management. Proven leadership track record."
+            },
+            {
+                title: "Guest Services Manager",
+                description: "Manage the guest services team to provide exceptional assistance.",
+                requirements: "Experience in customer service management. Strong leadership skills."
+            },
+            {
+                title: "Retail Manager",
+                description: "Oversee onboard retail operations, maximizing sales and guest experience.",
+                requirements: "Degree in Retail Management. Sales and management experience."
+            },
+            {
+                title: "Restaurant Supervisor",
+                description: "Assist in managing restaurant staff and ensuring service excellence.",
+                requirements: "Experience in food service supervision. Leadership skills."
+            },
+            {
+                title: "Entertainment Technician",
+                description: "Support entertainment productions with technical expertise.",
+                requirements: "Experience with lighting, sound, and stage equipment."
+            },
+            {
+                title: "Assistant Electrician",
+                description: "Assist in maintaining electrical systems and equipment.",
+                requirements: "Electrical training. Willingness to learn and assist."
+            },
+            {
+                title: "Food & Beverage Manager",
+                description: "Oversee all food and beverage operations for quality and profitability.",
+                requirements: "Degree in Hospitality Management. Extensive F&B experience."
+            },
+            {
+                title: "Safety Specialist",
+                description: "Develop and implement safety training and policies.",
+                requirements: "Degree in Occupational Safety. Certification in safety management."
+            },
+            {
+                title: "Purchasing Manager",
+                description: "Manage procurement of supplies and negotiate with vendors.",
+                requirements: "Degree in Business Administration. Experience in purchasing."
+            },
+            {
+                title: "Staff Captain",
+                description: "Second-in-command of the ship, overseeing daily operations.",
+                requirements: "Master Mariner License. Extensive maritime experience."
+            },
+            {
+                title: "First Officer",
+                description: "Assist the Captain in navigation and ship management.",
+                requirements: "STCW Certification. Degree in Nautical Science."
+            },
+            {
+                title: "Financial Controller",
+                description: "Manage financial operations, budgeting, and reporting.",
+                requirements: "Degree in Finance or Accounting. CPA certification preferred."
+            },
+            {
+                title: "Payroll Officer",
+                description: "Handle payroll processing and employee compensation.",
+                requirements: "Degree in Accounting. Experience with payroll systems."
+            },
+            {
+                title: "Crew Manager",
+                description: "Oversee crew recruitment, training, and welfare.",
+                requirements: "Degree in Human Resources. Experience in maritime HR."
+            },
+            {
+                title: "Chief Steward",
+                description: "Lead the stewarding team to provide excellent service.",
+                requirements: "Experience in hospitality leadership. Strong organizational skills."
+            },
+            {
+                title: "Environmental Officer",
+                description: "Ensure compliance with environmental regulations and policies.",
+                requirements: "Degree in Environmental Science. Knowledge of maritime laws."
+            },
+            {
+                title: "Shore Excursions Manager",
+                description: "Plan and coordinate guest excursions at various destinations.",
+                requirements: "Experience in travel planning. Strong coordination skills."
+            },
+            {
+                title: "Assistant Purser",
+                description: "Assist in administrative tasks and guest services operations.",
+                requirements: "Degree in Business Administration. Administrative experience."
+            },
+            {
+                title: "Second Officer",
+                description: "Support navigation and safety operations onboard.",
+                requirements: "STCW Certification. Experience in maritime operations."
+            },
+            {
+                title: "Third Officer",
+                description: "Assist in watchkeeping and safety duties.",
+                requirements: "Maritime training. STCW Certification."
+            },
+            {
+                title: "Hotel Steward",
+                description: "Provide general assistance in hotel services and guest care.",
+                requirements: "Experience in hospitality. Customer service skills."
+            },
+            {
+                title: "Cruise Consultant",
+                description: "Advise guests on future cruises and travel options.",
+                requirements: "Sales experience. Knowledge of cruise offerings."
+            },
+            {
+                title: "Chief Purser",
+                description: "Manage financial and administrative services onboard.",
+                requirements: "Degree in Finance or Business. Leadership experience."
+            },
+            {
+                title: "Chief Officer",
+                description: "Oversee deck operations and safety procedures.",
+                requirements: "Master Mariner License. Extensive deck experience."
+            },
+            {
+                title: "Deckhand",
+                description: "Assist with deck operations and maintenance tasks.",
+                requirements: "Experience in maritime operations. STCW Certification."
+            },
+            {
+                title: "Engineering Cadet",
+                description: "Learn and assist in engineering tasks under supervision.",
+                requirements: "Studying Marine Engineering. Willingness to learn."
+            },
+            {
+                title: "IT Support Specialist",
+                description: "Provide technical support to guests and crew for IT issues.",
+                requirements: "Degree in IT. Strong problem-solving skills."
+            },
+            {
+                title: "Restaurant Host",
+                description: "Welcome guests and manage seating arrangements.",
+                requirements: "Experience in hospitality. Excellent interpersonal skills."
+            },
+            {
+                title: "Onboard Trainer",
+                description: "Conduct training sessions for crew development.",
+                requirements: "Degree in Education or related field. Experience in training."
+            },
+            {
+                title: "Provision Master",
+                description: "Manage inventory and storage of provisions and supplies.",
+                requirements: "Experience in supply management. Organizational skills."
+            },
+            {
+                title: "Chief Mate",
+                description: "Second in command on deck, responsible for cargo and safety.",
+                requirements: "STCW Certification. Extensive maritime experience."
+            },
+            {
+                title: "F&B Supervisor",
+                description: "Assist in overseeing food and beverage operations.",
+                requirements: "Experience in F&B management. Leadership skills."
+            },
+            {
+                title: "Assistant Housekeeper",
+                description: "Support the housekeeping manager in daily operations.",
+                requirements: "Experience in housekeeping supervision."
+            },
+            {
+                title: "Concierge",
+                description: "Provide personalized services and assistance to VIP guests.",
+                requirements: "Experience in luxury hospitality. Discretion and professionalism."
+            }
+        ];
+
+       // Duplicate jobs to simulate more job postings
+    while (jobs.length < 86) {
+        jobs.push(...jobs.slice(0, 4));
+    }
+    jobs.length = 86; // Ensure the total number is exactly 86
+
+    // Pagination variables
+    let currentPage = 1;
+    const totalJobs = jobs.length;
+    const totalPages = Math.ceil(totalJobs / jobsPerPage);
+
+    // Function to display jobs
+    function displayJobs(page) {
+        const start = (page - 1) * jobsPerPage;
+        const end = start + jobsPerPage;
+        const jobsContainer = document.getElementById('jobs-container');
+        jobsContainer.innerHTML = '';
+
+        jobs.slice(start, end).forEach((job, index) => {
+            const jobCard = document.createElement('div');
+            jobCard.classList.add('job-card');
+            jobCard.innerHTML = `
+                <div class="job-title">${job.title}</div>
+                <div class="job-description">${job.description}</div>
+                <div class="job-requirements"><strong>Requirements:</strong> ${job.requirements}</div>
+                <a href="#" class="apply-button">Apply</a>
+            `;
+            jobsContainer.appendChild(jobCard);
+
+            // Add click event for the Apply button to open the modal
+            jobCard.querySelector('.apply-button').addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal();
+            });
+
+            // Add delay to each card's animation to create a cascading effect
+            setTimeout(() => {
+                jobCard.classList.add('visible'); // Trigger the animation
+            }, index * 100);
+        });
+    }
+
+    // Function to create pagination
+    function createPagination() {
+        const paginationContainer = document.getElementById('pagination');
+        paginationContainer.innerHTML = '';
+
+        // Previous Button
+        const prevPageLink = document.createElement('a');
+        prevPageLink.href = "#";
+        prevPageLink.textContent = 'Previous';
+        prevPageLink.classList.add('prev-button');
+        if (currentPage === 1) {
+            prevPageLink.classList.add('disabled');
+        }
+        prevPageLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (currentPage > 1) {
+                currentPage--;
+                updatePagination();
+            }
+        });
+        paginationContainer.appendChild(prevPageLink);
+
+        // Page Numbers
+        let startPage = Math.max(currentPage - Math.floor(maxVisiblePages / 2), 1);
+        let endPage = startPage + maxVisiblePages - 1;
+
+        if (endPage > totalPages) {
+            endPage = totalPages;
+            startPage = Math.max(endPage - maxVisiblePages + 1, 1);
+        }
+
+        for (let i = startPage; i <= endPage; i++) {
+            const pageLink = document.createElement('a');
+            pageLink.href = "#";
+            pageLink.textContent = i;
+            if (i === currentPage) {
+                pageLink.classList.add('active');
+            }
+
+            pageLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                currentPage = i;
+                updatePagination();
+            });
+
+            paginationContainer.appendChild(pageLink);
+        }
+
+        // Next Button
+        const nextPageLink = document.createElement('a');
+        nextPageLink.href = "#";
+        nextPageLink.textContent = 'Next';
+        nextPageLink.classList.add('next-button');
+        if (currentPage === totalPages) {
+            nextPageLink.classList.add('disabled');
+        }
+        nextPageLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (currentPage < totalPages) {
+                currentPage++;
+                updatePagination();
+            }
+        });
+        paginationContainer.appendChild(nextPageLink);
+    }
+
+    // Function to update pagination
+    function updatePagination() {
+        displayJobs(currentPage);
+        createPagination();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Initialize job listing and pagination on page load
+    updatePagination();
+
+    // Modal handling
+const modal = document.getElementById('applyModal');
+const successModal = document.getElementById('successModal');
+const loadingSpinner = document.getElementById('loadingSpinner');
+const closeButtons = document.querySelectorAll('.modal .close');
+
+function openModal() {
+    modal.classList.add('show');
+}
+
+function closeModal() {
+    modal.classList.remove('show');
+}
+
+function openSuccessModal() {
+    successModal.classList.add('show');
+}
+
+function closeSuccessModal() {
+    successModal.classList.remove('show');
+}
+
+closeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        button.closest('.modal').classList.remove('show');
+    });
+});
+
+window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        closeModal();
+    }
+    if (e.target === successModal) {
+        closeSuccessModal();
+    }
+    if (e.target === loadingSpinner) {
+        loadingSpinner.classList.remove('show');
+    }
+});
+
+// Handle form submission with AJAX
+const applyForm = document.getElementById('applyForm');
+applyForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+
+    // Show loading spinner
+    loadingSpinner.classList.add('show');
+
+    fetch('https://getform.io/f/bpjjjrjb', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        // Hide loading spinner
+        loadingSpinner.classList.remove('show');
+
+        if (response.ok) {
+            // Show success message
+            closeModal();
+            openSuccessModal();
+            // Reset the form
+            applyForm.reset();
+        } else {
+            alert('There was an error submitting your application. Please try again later.');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        // Hide loading spinner
+        loadingSpinner.classList.remove('show');
+        alert('There was an error submitting your application. Please try again later.');
+    });
+});
+});
+</script>
+</body>
+</html>

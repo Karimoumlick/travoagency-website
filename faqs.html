@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="thumbnails-1.webp/travo lakhir-07.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travo - FAQs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #FFFFFF;
+            color: #2C2C2C;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2B455B;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: #FFFFFF;
+        }
+
+        .faq-section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #F7FFF7;
+        }
+
+        .faq {
+    margin-bottom: 20px;
+            border-bottom: 1px solid #A9C1D9;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: #2B455B;
+            cursor: pointer;
+            padding: 10px 0;
+            position: relative;
+        }
+
+        .faq-question::after {
+            content: '\f078'; /* FontAwesome down arrow */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 10px;
+            transition: transform 0.3s;
+        }
+
+        .faq.active .faq-question::after {
+            transform: rotate(-180deg); /* Rotates the arrow */
+        }
+
+        .faq-answer {
+            font-size: 1rem;
+            color: #6D7D8B;
+            line-height: 1.6;
+            display: none;
+            padding: 0 0 10px 0;
+        }
+
+        .faq.active .faq-answer {
+            display: block;
+        }
+    .faq a {
+        text-decoration: none;
+       
+    }
+    .faq a :hover{
+        text-decoration: underline;
+    }
+
+       /* Footer Section Styling */
+.footer {
+    background: #003459;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 30px 15px; /* Reduced padding for a smaller footer */
+    font-size: 0.9rem; /* Reduced font size for better UX */
+    position: relative;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adds space between icons */
+    margin-bottom: 40px; /* Reduced margin for a smaller footer */
+}
+
+/* Social Media Icons */
+.social-icons a {
+    display: inline-block;
+    width: 40px; /* Reduced size for smaller icons */
+    height: 40px;
+    border-radius: 50%; /* Makes the icons circular */
+    background-color: #FFFFFF; /* Icon background color */
+    color: #003459; /* Icon color */
+    font-size: 20px; /* Reduced icon size */
+    line-height: 40px; /* Centers the icon vertically */
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #A9C1D9; /* Change background color on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Footer Email Styling */
+.footer-email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem; /* Reduced font size for smaller footer */
+}
+.no-pointer {
+    pointer-events: none;
+    cursor: default;
+}
+
+.footer-email a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.footer-email a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Links */
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 0.9rem; /* Reduced font size for a smaller footer */
+}
+
+.footer-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem; /* Ensure consistent font size */
+}
+
+/* Privacy Policy Link Styling */
+.privacy-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-size: 0.9rem; /* Reduced font size for a smaller footer */
+}
+
+.privacy-link:hover {
+    color: #5f6d77;
+}
+
+.footer p {
+    font-size: 0.9rem; /* Reduced font size for a smaller footer */
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    /* Adjust layout for small screens */
+    .social-icons {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .footer-links {
+        font-size: 0.8rem; /* Slightly larger text for mobile */
+    }
+
+    .testimonials-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .jobs-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .job-card {
+        width: 100%;
+        max-width: none;
+    }
+
+    .partners-container {
+        flex-direction: column;
+    }
+}
+
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.4s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+    </style>
+</head>
+<body>
+
+    <h1>Frequently Asked Questions</h1>
+
+    <section class="faq-section">
+
+        <!-- FAQ 1 -->
+        <div class="faq">
+            <div class="faq-question">1. How can I apply for a job on a cruise ship?</div>
+            <div class="faq-answer">&#x2022; You can apply directly through our website by selecting the job position you’re interested in and submitting your application through the form provided.</div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq">
+            <div class="faq-question">2. What documents do I need to apply?</div>
+            <div class="faq-answer">&#x2022; You will need to submit only your resume. Additional documents will be requested upon further review.</div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq">
+            <div class="faq-question">3. Is prior cruise ship experience necessary?</div>
+            <div class="faq-answer">&#x2022; While previous cruise ship experience is preferred for some roles, it is not always required. We offer various positions suited for different levels of experience.</div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq">
+            <div class="faq-question">4. How long does the recruitment process take?</div>
+            <div class="faq-answer">&#x2022; The recruitment process typically takes between 1 to 4 months, depending on the role and the number of applicants. We will keep you updated throughout the process.</div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq">
+            <div class="faq-question">5. What are the benefits of working on a cruise ship?</div>
+            <div class="faq-answer">&#x2022; Working on a cruise ship allows you to travel the world while earning a competitive salary. Additionally, you receive free accommodation and meals, and there are opportunities for career advancement.</div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq">
+            <div class="faq-question">6. What is the duration of contracts?</div>
+            <div class="faq-answer">&#x2022; Most contracts last between 6 to 9 months, with the possibility of renewal based on performance and availability.</div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="faq">
+            <div class="faq-question">7. What positions are currently available?</div>
+            <div class="faq-answer">&#x2022; We have various positions available in hospitality, medical, technical departments, and entertainment. Please check our <a href="all-jobs.html"><strong>Current Job Openings</strong></a> for more details.</div>
+        </div>
+
+        <!-- FAQ 8 -->
+        <div class="faq">
+            <div class="faq-question">8. Will I need a visa to work on a cruise ship?</div>
+            <div class="faq-answer">&#x2022; Yes, most positions require a work visa depending on the cruise ship's location. Our team will assist you in obtaining the necessary visas before your departure.</div>
+        </div>
+
+        <!-- FAQ 9 -->
+        <div class="faq">
+            <div class="faq-question">9. Can I travel with my family while working on a cruise ship?</div>
+            <div class="faq-answer">&#x2022; Unfortunately, crew members cannot bring family members onboard. However, you may visit your family during leave periods between contracts.</div>
+        </div>
+
+        <!-- FAQ 11 --> 
+         <div class="faq">
+           <div class="faq-question">10. What is the application process like?</div> 
+           <div class="faq-answer">&#x2022;  Our application process is designed to be straightforward and transparent. After submitting your application online, our recruitment team will review your qualifications. If you are shortlisted, we'll invite you for an initial interview, which may be conducted over the phone or via video call. Successful candidates will then proceed to further interviews or assessments relevant to the position. Throughout the process, we'll keep you updated on your application status. </div> </div>
+
+
+
+
+
+
+
+    </section>
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61567240391546" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/travo_agence/profilecard/?igsh=MWVrbHg5bHpxMzl1aQ%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/travoagency" target="_blank" rel="noopener noreferrer" aria-label="Travo-Agency LinkedIn Page">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        
+        </a>
+        <a href="https://wa.me/212605526611" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"> 
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        
+        </a>
+    </div>
+        <div class="footer-links">
+            <a href="#" class="no-pointer">TRAVEL FAR, WORK BETTER.</a>
+
+             <!-- Email Address with Icon -->
+       <div class="footer-email">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:contact@travo-agency.com">contact@travo-agency.com</a>
+       </div>
+            <a id="privacyPolicyLink" class="privacy-link" href="privacy-policy.html" target="_blank">Privacy Policy</a>
+
+        </div>
+       
+        <hr>
+        <p>&copy; 2024 Travo Agency. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript to toggle FAQ answers
+        const faqs = document.querySelectorAll('.faq');
+
+        faqs.forEach(faq => {
+            faq.addEventListener('click', () => {
+                faq.classList.toggle('active');
+            });
+        });
+
+
+
+
+
+    </script>
+</body>
+</html>
